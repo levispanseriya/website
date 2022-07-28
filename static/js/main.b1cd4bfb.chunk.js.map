@@ -1,0 +1,43 @@
+{
+    "version": 3,
+    "sources": [
+        "components/glitchText.js",
+        "components/menu.js",
+        "App.js",
+        "index.js"
+    ],
+    "names": [
+        "GlitchText",
+        "text",
+        "class",
+        "aria-hidden",
+        "className",
+        "menu",
+        "style",
+        "display",
+        "flexDirection",
+        "justifyContent",
+        "padding",
+        "onClick",
+        "window",
+        "open",
+        "fontSize",
+        "marginLeft",
+        "marginRight",
+        "App",
+        "ReactDOM",
+        "render",
+        "StrictMode",
+        "document",
+        "getElementById"
+    ],
+    "mappings": "wJAEe,SAASA,EAAT,GAA+B,IAATC,EAAQ,EAARA,KACnC,OACE,qCACA,8BACE,8BACE,oBAAGC,MAAM,SAAT,UACE,sBAAMC,cAAY,OAAlB,SAA0BF,IACzBA,EACD,sBAAME,cAAY,OAAlB,SAA0BF,WAK9B,mBAAGG,UAAU,OAAb,gF,WCPS,SAASC,IACtB,OACE,sBACEC,MAAO,CACLC,QAAS,OACTC,cAAe,MAEfC,eAAgB,WAChBC,QAAS,UANb,UASE,cAAC,IAAD,CACEC,QAAS,WACPC,OAAOC,KAAK,sCAEdT,UAAU,aACVU,SAAS,QAEX,cAAC,IAAD,CACEH,QAAS,WACPC,OAAOC,KAAK,uCAEdT,UAAU,cACVE,MAAO,CACLS,WAAY,OAEdD,SAAS,QAEX,cAAC,IAAD,CACEH,QAAS,WACPC,OAAOC,KAAK,uCAEdT,UAAU,WACVE,MAAO,CACLS,WAAY,OAEdD,SAAS,QAEX,cAAC,IAAD,CACEH,QAAS,WACPC,OAAOC,KAAK,gDAEdT,UAAU,eACVE,MAAO,CACLS,WAAY,MACZC,YAAa,OAEfF,SAAS,WCvCFG,MAZf,WACE,OACE,gCACE,cAAC,EAAD,IACA,cAACjB,EAAD,CAAYC,KAAK,oBACjB,qBAAKG,UAAU,iBCLrBc,IAASC,OACP,cAAC,IAAMC,WAAP,UACE,cAAC,EAAD,MAEFC,SAASC,eAAe,U",
+    "file": "static/js/main.b1cd4bfb.chunk.js",
+    "sourcesContent": [
+        "import React from \"react\";\n\nexport default function GlitchText({ text }) {\n  return (\n    <>\n    <div>\n      <div>\n        <p class=\"glitch\">\n          <span aria-hidden=\"true\">{text}</span>\n          {text}\n          <span aria-hidden=\"true\">{text}</span>\n        </p>\n        \n      </div>\n    </div>\n      <p className=\"para\">Passionate about changing the world with Blockchain technology.</p>\n    </>\n  );\n}\n",
+        "import React from \"react\";\nimport {\n  RiGithubLine,\n  RiLinkedinLine,\n  RiMailOpenLine,\n  RiTwitterLine,\n} from \"react-icons/ri\";\n\nexport default function menu() {\n  return (\n    <div\n      style={{\n        display: \"flex\",\n        flexDirection: \"row\",\n        // Left\n        justifyContent: \"flex-end\",\n        padding: \"0.5rem\",\n      }}\n    >\n      <RiGithubLine\n        onClick={() => {\n          window.open(\"https://github.com/levispanseriya\");\n        }}\n        className=\"githubIcon\"\n        fontSize=\"2em\"\n      />\n      <RiTwitterLine\n        onClick={() => {\n          window.open(\"https://twitter.com/LevisPanseriya\");\n        }}\n        className=\"twitterIcon\"\n        style={{\n          marginLeft: \"1em\",\n        }}\n        fontSize=\"2em\"\n      />\n      <RiMailOpenLine\n        onClick={() => {\n          window.open(\"mailto:levispanseriya.78@gmail.com\");\n        }}\n        className=\"mailIcon\"\n        style={{\n          marginLeft: \"1em\",\n        }}\n        fontSize=\"2em\"\n      />\n      <RiLinkedinLine\n        onClick={() => {\n          window.open(\"https://www.linkedin.com/in/levispanseriya/\");\n        }}\n        className=\"linkedinIcon\"\n        style={{\n          marginLeft: \"1em\",\n          marginRight: \"1em\",\n        }}\n        fontSize=\"2em\"\n      />\n    </div>\n  );\n}\n",
+        "import \"./App.css\";\nimport GlitchText from \"./components/glitchText\";\nimport Menu from \"./components/menu\";\n\nfunction App() {\n  return (\n    <div>\n      <Menu />\n      <GlitchText text=\"Levis Panseriya\" />\n      <div className=\"main_div\">\n\n      </div>\n    </div>\n  );\n}\n\nexport default App;\n",
+        "import React from \"react\";\nimport ReactDOM from \"react-dom\";\nimport App from \"./App\";\n\nReactDOM.render(\n  <React.StrictMode>\n    <App />\n  </React.StrictMode>,\n  document.getElementById(\"root\")\n);\n"
+    ],
+    "sourceRoot": ""
+}
